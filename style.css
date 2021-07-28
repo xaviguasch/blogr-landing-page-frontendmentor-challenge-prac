@@ -48,8 +48,8 @@
   --fs-80: 5rem;
 
   /*Primary */
-  --clr-ligh-red: hsl(356, 100%, 66%);
-  --clr-very-light-red: hsl(355, 100%, 74%);
+  --clr-light-red-btn: hsl(356, 100%, 66%);
+  --clr-very-light-red-btn: hsl(355, 100%, 74%);
   --clr-very-dark-blue: hsl(208, 49%, 24%);
 
   /* Neutral */
@@ -69,13 +69,11 @@
 
   --clr-pink: hsl(322, 100%, 66%);
   --clr-pink-hover: hsl(322, 87%, 76%);
-
-  --clr-white: hsl(0, 0%, 100%);
 }
 
 body {
   background-color: var(--clr-white);
-  color: var(--clr-very-dark-gray-blue);
+  color: var(--clr-very-dark-grayish-blue);
   font-family: var(--ff-main);
   font-size: var(--fs-16);
   font-weight: var(--fw-light);
@@ -91,6 +89,199 @@ img {
 /* ================== */
 /* Typography */
 /* ================== */
+.title {
+  font-size: var(--fs-36);
+  color: var(--clr-white);
+  font-weight: var(--fw-semi-bold);
+  letter-spacing: -1.08px;
+  line-height: 1.53;
+}
+
+.hero-subtitle {
+  font-size: var(--fs-18);
+  color: var(--clr-white);
+}
+
+.md-title,
+.sm-title {
+  font-size: var(--fs-28);
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-very-dark-blue);
+}
+
+.sm-title {
+  line-height: 1.14385;
+}
+
+.copy-text {
+  letter-spacing: 0.5px;
+}
+
+.md-title--bis {
+  font-size: var(--fs-40);
+  line-height: 1.5325;
+  /* color: var(--clr-white); */
+}
+
+.copy-text--bis {
+  /* color: var(--clr-white); */
+}
+
+.footer__title {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-18);
+  font-weight: var(--fw-medium);
+  /* color: var(--clr-white); */
+}
+
+.footer__link {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-18);
+  font-weight: var(--fw-regular);
+  color: var(--clr-grayish-blue);
+  text-decoration: none;
+}
+
+/* ================== */
+/* Buttons & inputs */
+/* ================== */
+
+.btn {
+  display: inline-block;
+  color: var(--clr-light-red-btn);
+  background-color: var(--clr-white);
+  text-decoration: none;
+  font-size: var(--ff-secondary);
+  font-weight: var(--fw-bold);
+  padding: 0.75em 1em;
+  width: 137px;
+  border-radius: 2em;
+  border: 1px solid var(--clr-white);
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--clr-white);
+  background: var(--clr-very-light-red-btn);
+  border: 1px solid var(--clr-very-light-red-btn);
+}
+
+.btn--2 {
+  color: var(--clr-white);
+  background: transparent;
+  border: 1px solid var(--clr-white);
+}
+
+.btn--2:hover,
+.btn--2:focus {
+  background: var(--clr-white);
+  color: var(--clr-very-light-red-btn);
+}
+
+.open-nav {
+  background-color: transparent;
+  border: none;
+}
+
+.close-nav {
+  display: none;
+}
+
+/* ================== */
+/* Utility styles */
+/* ================== */
+
+/* ================== */
+/* SECTIONS */
+/* ================== */
+
+.header {
+  background-image: url('./images/bg-pattern-intro.svg'),
+    linear-gradient(to bottom, var(--clr-very-light-red) 0%, var(--clr-light-red) 100%);
+  background-size: 280%;
+  background-repeat: no-repeat;
+  background-position: -20em 0em;
+
+  height: 600px;
+
+  border-radius: 0 0 0 6em;
+}
+
+.header-logo-and-nav-container {
+  padding: 3.5em 1.5em 0;
+}
+
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-img {
+  width: 82px;
+}
+
+.nav {
+  display: none;
+}
+
+.hero {
+  margin-top: 6.75em;
+}
+
+.title,
+.hero-subtitle {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.hero-buttons {
+  margin-top: 3em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+/* Main */
+.main {
+  padding: 6.25em 1.5em 0;
+}
+
+.feat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feat--one .feat__illustration {
+  order: -1;
+  margin-top: 2.375em;
+}
+
+.desktop-img {
+  display: none;
+}
+
+.feat--one .feat__copy {
+  margin-top: 2.875em;
+}
+
+.feat--one .sm-title {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.feat--one .copy-text {
+  margin: 1.5em auto 0;
+  width: 95%;
+}
+
+.feat--one .copy-block:nth-last-of-type(1) {
+  margin-top: 2.5em;
+}
 
 /* ================== */
 /* ================== */
@@ -106,7 +297,6 @@ img {
 /* ================== */
 /* ================== */
 /* ================== */
-
 .attribution {
   font-size: 11px;
   text-align: center;
