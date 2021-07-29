@@ -191,6 +191,10 @@ img {
 /* Utility styles */
 /* ================== */
 
+.desktop-img {
+  display: none;
+}
+
 /* ================== */
 /* SECTIONS */
 /* ================== */
@@ -263,10 +267,8 @@ img {
 .feat--one .feat__illustration {
   order: -1;
   margin-top: 2.375em;
-}
 
-.desktop-img {
-  display: none;
+  max-width: 400px;
 }
 
 .feat--one .feat__copy,
@@ -285,6 +287,8 @@ img {
 .feat--three .copy-text {
   margin: 1.5em auto 0;
   width: 95%;
+
+  max-width: 500px;
 }
 
 .feat--one .copy-block:nth-last-of-type(1),
@@ -318,6 +322,8 @@ img {
   padding-top: 2em;
 
   overflow: hidden;
+
+  max-width: 400px;
 }
 
 .phones-img {
@@ -333,11 +339,13 @@ img {
 .feat--three .feat__illustration {
   order: -1;
   overflow: hidden;
-  padding: 2.75em 0;
+  padding: 3.25em 0;
 }
 
 .feat--three .mobile-img {
   transform: scale(1.5);
+
+  max-width: 400px;
 }
 
 /* Footer */
@@ -381,16 +389,87 @@ img {
 }
 
 /* ================== */
+/* MEDIA QUERIES */
 /* ================== */
-/* ================== */
-/* ================== */
-/* ================== */
-/* ================== */
-/* ================== */
-/* ================== */
-/* ================== */
-/* ================== */
-/* ================== */
-/* ================== */
-/* ================== */
-/* ================== */
+
+@media (min-width: 1050px) {
+  /* Typography */
+  .title {
+    font-size: var(--fs-64);
+  }
+
+  /* Utility classes */
+  .desktop-img {
+    display: block;
+  }
+
+  .mobile-img {
+    display: none;
+  }
+
+  .hero-subtitle {
+    font-size: var(--fs-20);
+    color: var(--clr-white);
+  }
+
+  .md-title {
+    font-size: var(--fs-40);
+  }
+
+  /* Sections */
+  .header-logo-and-nav-container {
+    padding: 4em 4em 0;
+  }
+
+  .main {
+    position: relative;
+  }
+
+  .md-title--main {
+    position: absolute;
+    top: 4.5em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .feat {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2em;
+  }
+
+  /* Feat one */
+  .feat--one {
+    padding: 0 4em;
+
+    overflow: hidden;
+  }
+
+  .feat--one .feat__copy {
+    width: 50%;
+  }
+
+  .feat--one .copy-block {
+    text-align: left;
+  }
+
+  .feat--one .sm-title {
+    width: 100%;
+    margin: 0;
+  }
+
+  .feat--one .copy-text {
+    margin: 1.5em 0 0;
+    width: 100%;
+
+    max-width: 480px;
+  }
+
+  .feat--one .feat__illustration {
+    order: 0;
+    margin-top: unset;
+    margin-right: -25em;
+
+    max-width: 800px;
+  }
+}
