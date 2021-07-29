@@ -120,18 +120,18 @@ img {
 .md-title--bis {
   font-size: var(--fs-40);
   line-height: 1.5325;
-  /* color: var(--clr-white); */
+  color: var(--clr-white);
 }
 
 .copy-text--bis {
-  /* color: var(--clr-white); */
+  color: var(--clr-white);
 }
 
 .footer__title {
   font-family: var(--ff-secondary);
   font-size: var(--fs-18);
   font-weight: var(--fw-medium);
-  /* color: var(--clr-white); */
+  color: var(--clr-white);
 }
 
 .footer__link {
@@ -246,7 +246,7 @@ img {
 
 /* Main */
 .main {
-  padding: 6.25em 1.5em 0;
+  padding-top: 6.25em;
 }
 
 .feat {
@@ -254,6 +254,10 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.feat--one {
+  padding: 0 1.5em;
 }
 
 .feat--one .feat__illustration {
@@ -265,7 +269,9 @@ img {
   display: none;
 }
 
-.feat--one .feat__copy {
+.feat--one .feat__copy,
+.feat--two .feat__copy,
+.feat--three .feat__copy {
   margin-top: 2.875em;
 }
 
@@ -274,14 +280,66 @@ img {
   margin: 0 auto;
 }
 
-.feat--one .copy-text {
+.feat--one .copy-text,
+.feat--two .copy-text,
+.feat--three .copy-text {
   margin: 1.5em auto 0;
   width: 95%;
 }
 
-.feat--one .copy-block:nth-last-of-type(1) {
+.feat--one .copy-block:nth-last-of-type(1),
+.feat--three .copy-block:nth-last-of-type(1) {
   margin-top: 2.5em;
 }
+
+/* Feat Two */
+.feat--two {
+  padding: 0 1.5em 5.815em;
+
+  margin-top: 17em;
+
+  background-image: url('./images/bg-pattern-circles.svg'),
+    linear-gradient(
+      to bottom,
+      var(--clr-very-dark-gray-blue) 0%,
+      var(--clr-very-dark-desaturated-blue) 100%
+    );
+
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: 0em 0em;
+
+  border-radius: 0 6em 0 6em;
+}
+
+.feat--two .feat__illustration {
+  order: -1;
+  margin-top: -10em;
+
+  overflow: hidden;
+}
+
+.phones-img {
+  transform: scale(1.2);
+}
+
+/* Feat Three */
+.feat--three {
+  margin-top: 4.9375em;
+  padding: 0 1.5em 6.25em;
+}
+
+.feat--three .feat__illustration {
+  order: -1;
+  overflow: hidden;
+  padding: 1em 0;
+}
+
+.feat--three .mobile-img {
+  transform: scale(1.2);
+}
+
+/* Footer */
 
 /* ================== */
 /* ================== */
