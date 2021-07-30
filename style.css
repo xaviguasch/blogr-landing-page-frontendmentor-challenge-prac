@@ -115,6 +115,7 @@ img {
 
 .copy-text {
   letter-spacing: 0.5px;
+  line-height: 1.75;
 }
 
 .md-title--bis {
@@ -398,6 +399,10 @@ img {
     font-size: var(--fs-64);
   }
 
+  .md-title.md-title--bis {
+    font-size: var(--fs-32);
+  }
+
   /* Utility classes */
   .desktop-img {
     display: block;
@@ -427,7 +432,7 @@ img {
 
   .md-title--main {
     position: absolute;
-    top: 4.5em;
+    top: 3.5em;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -435,7 +440,6 @@ img {
   .feat {
     flex-direction: row;
     justify-content: flex-start;
-    gap: 2em;
   }
 
   /* Feat one */
@@ -447,9 +451,12 @@ img {
 
   .feat--one .feat__copy {
     width: 50%;
+
+    padding-top: 2em;
   }
 
-  .feat--one .copy-block {
+  .feat--one .copy-block,
+  .feat--two .copy-block {
     text-align: left;
   }
 
@@ -458,18 +465,46 @@ img {
     margin: 0;
   }
 
-  .feat--one .copy-text {
+  .feat--one .copy-text,
+  .feat--two .copy-text {
     margin: 1.5em 0 0;
     width: 100%;
 
-    max-width: 480px;
+    max-width: 540px;
   }
 
   .feat--one .feat__illustration {
     order: 0;
     margin-top: unset;
-    margin-right: -25em;
+    padding: 8.5em 0;
+  }
 
-    max-width: 800px;
+  .feat--one .feat__illustration .desktop-img {
+    transform: scale(1.7) translateX(30%);
+  }
+
+  /* feat two */
+  .feat--two {
+    padding: 0 4em 5.815em;
+
+    width: 100%;
+    gap: 0;
+
+    margin-top: 8em;
+  }
+
+  .feat--two .feat__copy {
+    width: 100%;
+
+    margin-top: 6em;
+    padding-left: 3em;
+  }
+
+  .feat--two .feat__illustration {
+    width: 100%;
+    padding-right: 3em;
+    max-width: unset;
+    margin-top: -3.5em;
+    margin-bottom: -10em;
   }
 }
