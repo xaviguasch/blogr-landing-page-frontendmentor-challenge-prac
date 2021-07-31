@@ -466,7 +466,8 @@ img {
   }
 
   .feat--one .copy-text,
-  .feat--two .copy-text {
+  .feat--two .copy-text,
+  .feat--three .copy-text {
     margin: 1.5em 0 0;
     width: 100%;
 
@@ -491,20 +492,52 @@ img {
     gap: 0;
 
     margin-top: 8em;
+
+    max-height: 300px;
   }
 
   .feat--two .feat__copy {
     width: 100%;
 
     margin-top: 6em;
-    padding-left: 3em;
+    padding-left: 0;
   }
 
   .feat--two .feat__illustration {
     width: 100%;
-    padding-right: 3em;
     max-width: unset;
-    margin-top: -3.5em;
-    margin-bottom: -10em;
+    margin-top: 0em;
+    margin-bottom: -8em;
+    padding: 3em 0em 3em 2em;
+  }
+
+  .feat--two .feat__illustration .phones-img {
+    transform: scale(1) translateX(-15%);
+  }
+
+  /* Feat three */
+
+  .feat--three {
+    margin-top: 8em;
+    padding: 0 4em 6.25em 0em;
+  }
+
+  .feat--three .feat__copy {
+    margin-top: 0;
+    padding-left: 2.5em;
+
+    width: 100%;
+
+    text-align: left;
+  }
+
+  .feat--three .feat__illustration {
+    padding: 6em 0em 6em 2em;
+
+    width: 100%;
+  }
+
+  .feat--three .desktop-img {
+    transform: scale(1.5) translateX(-15%);
   }
 }
