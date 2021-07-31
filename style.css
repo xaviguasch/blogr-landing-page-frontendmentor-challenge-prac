@@ -455,7 +455,7 @@ img {
   }
 
   .feat--one .feat__copy {
-    width: 50%;
+    width: 100%;
 
     padding-top: 2em;
   }
@@ -483,10 +483,15 @@ img {
     order: 0;
     margin-top: unset;
     padding: 8.5em 0;
+
+    width: 100%;
+
+    max-width: unset;
   }
 
-  .feat--one .feat__illustration .desktop-img {
+  .feat--one .desktop-img {
     transform: scale(1.7) translateX(30%);
+    max-width: 500px;
   }
 
   /* feat two */
@@ -540,10 +545,12 @@ img {
     padding: 6em 0em 6em 2em;
 
     width: 100%;
+    max-width: unset;
   }
 
   .feat--three .desktop-img {
     transform: scale(1.5) translateX(-15%);
+    max-width: 500px;
   }
 
   /* Footer */
