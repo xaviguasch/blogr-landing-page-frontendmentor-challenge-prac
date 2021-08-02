@@ -104,9 +104,14 @@ img {
   border-bottom: 2px solid var(--clr-white);
 }
 
+.nav-link__text {
+  color: var(--clr-very-dark-gray-blue);
+}
+
 .drop-link {
   font-family: var(--ff-secondary);
   font-weight: var(--fw-regular);
+  color: var(--clr-very-dark-blue);
 }
 
 .drop-link:hover,
@@ -204,9 +209,11 @@ img {
   color: var(--clr-very-light-red-btn);
 }
 
-.open-nav {
+.open-nav,
+.close-nav {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .close-nav {
@@ -239,6 +246,8 @@ img {
 
 .header-logo-and-nav-container {
   padding: 3.5em 1.5em 0;
+
+  position: relative;
 }
 
 .header__row {
@@ -253,6 +262,33 @@ img {
 
 .nav {
   display: none;
+}
+
+.nav.open {
+  position: absolute;
+  top: 8em;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--clr-white);
+  margin: 0 1.5em;
+  border-radius: 0.5em;
+  padding: 1.5em 1.5em 2em;
+  box-shadow: 2px 11px 6px 2px rgba(0, 0, 0, 0.1);
+}
+
+.nav.open .logo {
+  display: none;
+}
+
+.nav-list,
+.drop-bar {
+  list-style-type: none;
 }
 
 .hero {
@@ -277,6 +313,8 @@ img {
 /* Main */
 .main {
   padding-top: 6.25em;
+
+  overflow: hidden;
 }
 
 .feat {
@@ -287,7 +325,7 @@ img {
 }
 
 .feat--one {
-  padding: 0 1.5em;
+  /* padding: 0 1.5em; */
 }
 
 .feat--one .feat__illustration {
@@ -301,6 +339,7 @@ img {
 .feat--two .feat__copy,
 .feat--three .feat__copy {
   margin-top: 2.875em;
+  padding: 0 1.5em;
 }
 
 .feat--one .sm-title {
