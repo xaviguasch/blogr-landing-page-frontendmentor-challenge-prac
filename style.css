@@ -104,6 +104,16 @@ img {
   border-bottom: 2px solid var(--clr-white);
 }
 
+.drop-link {
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-regular);
+}
+
+.drop-link:hover,
+.drop-link:focus {
+  font-weight: var(--fw-bold);
+}
+
 .title {
   font-size: var(--fs-36);
   color: var(--clr-white);
@@ -472,14 +482,40 @@ img {
   }
 
   .nav-link {
+    position: relative;
   }
 
   .nav-link__arrow {
     display: inline-block;
   }
 
+  .nav-link:hover .nav-link__arrow,
+  .nav-link:focus .nav-link__arrow {
+    transform: rotate(180deg);
+  }
+
   .drop-bar {
     display: none;
+  }
+
+  .nav-link:hover .drop-bar,
+  .nav-link:focus .drop-bar {
+    display: block;
+
+    list-style: none;
+
+    position: absolute;
+    top: 3em;
+    left: -1em;
+
+    width: 168px;
+
+    background: var(--clr-white);
+    color: var(--clr-very-dark-gray-blue);
+    padding: 1.5em;
+    border-radius: 0.5em;
+
+    line-height: 2.2;
   }
 
   .main {
