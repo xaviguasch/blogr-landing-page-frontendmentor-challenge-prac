@@ -21,11 +21,15 @@ const hideModal = () => {
 }
 
 const showDrop = (e) => {
-  navLinks.forEach((navLink) => {
-    navLink.classList.remove('open')
-  })
+  if (!e.target.parentElement.classList.contains('open')) {
+    navLinks.forEach((navLink) => {
+      navLink.classList.remove('open')
+    })
 
-  e.target.parentElement.classList.add('open')
+    e.target.parentElement.classList.add('open')
+  } else {
+    e.target.parentElement.classList.remove('open')
+  }
 }
 
 // Event listeners
