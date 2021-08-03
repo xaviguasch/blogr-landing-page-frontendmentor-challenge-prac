@@ -137,6 +137,7 @@ img {
 .nav-link {
   text-decoration: none;
   font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-18);
 }
 
 .nav-link__text {
@@ -182,8 +183,8 @@ img {
 
 .btn {
   display: inline-block;
-  color: var(--clr-light-red-btn);
-  background-color: var(--clr-white);
+  color: var(--clr-white);
+  background-color: var(--clr-light-red-btn);
   text-decoration: none;
   font-size: var(--ff-secondary);
   font-weight: var(--fw-bold);
@@ -191,6 +192,8 @@ img {
   width: 137px;
   border-radius: 2em;
   border: 1px solid var(--clr-white);
+
+  margin-top: 1.5em;
 }
 
 .btn:hover,
@@ -294,8 +297,22 @@ img {
   list-style-type: none;
 }
 
+.nav-item {
+  margin-top: 1.5em;
+}
+
 .drop-bar {
   display: none;
+}
+
+.nav-list--one {
+  padding-bottom: 1.5em;
+}
+
+.nav-list--two {
+  border-top: 1px solid var(--clr-grayish-blue);
+  padding-top: 1.5em;
+  width: 100%;
 }
 
 /* Hero */
